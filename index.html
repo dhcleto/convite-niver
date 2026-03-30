@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Convite • Aniversário do Demetrio 🎉</title>
+  <title>Almoço de Páscoa • Bianca 🐰</title>
   <meta name="theme-color" content="#070A12" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -19,75 +19,61 @@
   <main class="wrap">
     <!-- HERO -->
     <section class="card hero">
-      <div class="badge">🚀 Convite</div>
+      <div class="badge">🐰 Convite</div>
 
       <h1 class="title">
-        Aniversário do <span class="neon">Demetrio</span> 🎂
+        Almoço de Páscoa da <span class="neon">Bianca</span> 🎉
       </h1>
 
       <p class="subtitle">
-        Bora comemorar comigo? 
+        Vamos aproveitar a Páscoa juntos?  
+        Vai ser um almoço simples, com boa comida e resenha.
       </p>
 
       <div class="heroImg">
         <img src="img/foto_inical.png" alt="Foto inicial" />
       </div>
 
-      <!-- Contagens -->
-      <div class="countdowns">
-        <div class="card-mini">
-          <div class="countTitle">⏳ Meu aniversário (25/02 00:00)</div>
-          <div class="countValue" id="cdBday">carregando…</div>
-        </div>
-
-        <div class="card-mini">
-          <div class="countTitle">🔥 Churrasco (28/02 13:00)</div>
-          <div class="countValue" id="cdEvent">carregando…</div>
-        </div>
-      </div>
-
       <!-- Infos -->
       <div class="info">
         <div class="pill">
           <span class="k">📅</span>
-          <span class="v">Sábado, 28/02 • 13:00 </span>
+          <span class="v">03/04 • 13:30</span>
         </div>
+
         <div class="pill">
           <span class="k">📍</span>
-          <span class="v">Condomínio Expression • Barra Funda</span>
+          <span class="v">Rua Ozias Teodoro de Sousa, 46</span>
         </div>
       </div>
 
       <div class="funText">
-        <p><strong>Vai ter:</strong> churrasco, resenha e bebidas.</p>
-        <p class="muted small">
-          Irei comprar algumas cervejas, refris e tbm terá algumas bebidas destiladas, porém sua bebida também é Bem-Vinda.
+        <p>
+          <strong>Vai ter:</strong> almoço, conversa boa e uma resenha tranquila.
         </p>
+
         <p class="muted small">
-          Endereço: <strong>R. Dr. Alfredo de Castro, 250 - Barra Funda, São Paulo - SP, 01155-060</strong>
+          Vou providenciar algumas bebidas, mas quem quiser trazer algo também fica à vontade.
+        </p>
+
+        <p class="muted small">
+          Endereço: <strong>Rua Ozias Teodoro de Sousa, 46</strong>
         </p>
       </div>
 
       <div class="cta">
-        <button class="btn" id="openRsvp" type="button">Confirmar presença</button>
-        <a class="btn ghost" id="openMaps" href="#" target="_blank" rel="noopener">Abrir no Maps</a>
+        <button class="btn" id="openRsvp" type="button">
+          Confirmar presença
+        </button>
+
+        <a class="btn ghost" id="openMaps" href="#" target="_blank" rel="noopener">
+          Abrir no Maps
+        </a>
       </div>
 
       <p class="muted small hint">
-        Confirma aí pra eu conseguir organizar tudo certinho 
+        Confirma aí pra gente se organizar melhor 👍
       </p>
-    </section>
-
-    <!-- Foto frente prédio -->
-    <section class="card">
-      <h2 class="sectionTitle">🏢 Entrada do condomínio</h2>
-      <div class="entry">
-        <img src="img/frente_predio.png" alt="Frente do prédio" />
-        <div class="entryText">
-          <p><strong>Na portaria:</strong> fala que é pro aniversário do Demetrio (Condomínio Expression).</p>
-          <p class="muted">Qualquer dúvida, me chama.</p>
-        </div>
-      </div>
     </section>
 
     <footer class="footer">
@@ -106,42 +92,31 @@
       <form id="rsvpForm">
         <label class="label">
           Seu nome
-          <input id="nome" name="nome" type="text" placeholder="Ex: Maria Silva" required />
+          <input 
+            id="nome" 
+            name="nome" 
+            type="text" 
+            placeholder="Ex: Maria Silva" 
+            required 
+          />
         </label>
 
         <div class="actions">
-          <button class="btn" type="submit">Confirmar ✅</button>
-          <button class="btn ghost" type="button" id="cancelRsvp">Cancelar</button>
+          <button class="btn" type="submit">
+            Confirmar ✅
+          </button>
+
+          <button class="btn ghost" type="button" id="cancelRsvp">
+            Cancelar
+          </button>
         </div>
 
-        <p class="muted small" id="rsvpNote">É rapidinho, só pra eu me organizar.</p>
+        <p class="muted small" id="rsvpNote">
+          É rapidinho, só pra gente se organizar.
+        </p>
       </form>
     </div>
   </div>
-
-  <!-- MODAL FINAL (foto_final + obrigado) -->
-  <div class="overlay" id="finalOverlay" hidden>
-    <div class="modal card" role="dialog" aria-modal="true" aria-labelledby="finalTitle">
-      <div class="modalHead">
-        <h3 id="finalTitle">Fechou! 🎉</h3>
-        <button class="x" id="closeFinal" type="button" aria-label="Fechar">×</button>
-      </div>
-
-      <p class="subtitle finalText">
-        Valeu, <strong><span class="neon" id="finalName">amigo(a)</span></strong>!  
-        Tô contando com você lá 😄  
-        E já avisando… minha namorada tá preparando uns docinhos brabos 🍬
-      </p>
-
-      <div class="finalImg">
-        <img src="img/foto_final.jpeg" alt="Foto final" />
-      </div>
-
-      <div class="actions">
-        <button class="btn ghost" id="okFinal" type="button">Fechar</button>
-      </div>
-    </div>
-  </div>f
 
   <script src="script.js"></script>
 </body>
