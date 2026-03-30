@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 console.log("✅ script.js carregou");
 
 // ===== CONFIG =====
@@ -37,6 +39,7 @@ if (finalOverlay) finalOverlay.hidden = true;
 // ===== Modal functions =====
 function openModal() {
   if (!overlay) return;
+
   if (finalOverlay) finalOverlay.hidden = true;
 
   overlay.hidden = false;
@@ -51,7 +54,7 @@ function closeModal() {
 
   overlay.hidden = true;
 
-  if (form) form.reset();
+  form?.reset();
 
   if (noteEl) {
     noteEl.textContent = "Rapidinho, só pra eu me organizar.";
@@ -65,7 +68,7 @@ function closeModal() {
 function openFinal(nome) {
   if (!finalOverlay) return;
 
-  if (overlay) overlay.hidden = true;
+  overlay.hidden = true;
 
   if (finalName) finalName.textContent = nome;
 
@@ -115,6 +118,7 @@ async function submitToGoogleForms(nome) {
 
 // ===== Submit RSVP =====
 form?.addEventListener("submit", async (e) => {
+
   e.preventDefault();
 
   const nome = (nomeEl?.value || "").trim();
@@ -131,6 +135,7 @@ form?.addEventListener("submit", async (e) => {
   }
 
   try {
+
     await submitToGoogleForms(nome);
 
     closeModal();
@@ -148,4 +153,7 @@ form?.addEventListener("submit", async (e) => {
 
     console.error(err);
   }
+
+});
+
 });
