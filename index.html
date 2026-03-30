@@ -77,29 +77,70 @@
   <!-- MODAL RSVP -->
   <div class="overlay" id="overlay" hidden>
     <div class="modal card" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+      
       <div class="modalHead">
         <h3 id="rsvpTitle">Confirmar presença</h3>
-        <button class="x" id="closeRsvp" type="button" aria-label="Fechar">×</button>
+        <button class="x" id="closeRsvp" type="button">×</button>
       </div>
 
       <form id="rsvpForm">
         <label class="label">
           Seu nome
-          <input id="nome" name="nome" type="text" placeholder="Ex: Maria Silva" required />
+          <input 
+            id="nome" 
+            name="nome" 
+            type="text" 
+            placeholder="Ex: Maria Silva" 
+            required 
+          />
         </label>
 
         <div class="actions">
-          <button class="btn" type="submit">Confirmar ✅</button>
-          <button class="btn ghost" type="button" id="cancelRsvp">Cancelar</button>
+          <button class="btn" type="submit">
+            Confirmar ✅
+          </button>
+
+          <button 
+            class="btn ghost" 
+            type="button" 
+            id="cancelRsvp"
+          >
+            Cancelar
+          </button>
         </div>
 
         <p class="muted small" id="rsvpNote">
           É rapidinho, só pra eu me organizar.
         </p>
+
       </form>
+
+    </div>
+  </div>
+
+  <!-- IMPORTANTE (igual ao original) -->
+  <div class="overlay" id="finalOverlay" hidden>
+    <div class="modal card">
+      <div class="modalHead">
+        <h3>Confirmado 🎉</h3>
+        <button class="x" id="closeFinal" type="button">×</button>
+      </div>
+
+      <p class="subtitle finalText">
+        Obrigada, <strong><span class="neon" id="finalName">amigo(a)</span></strong>!  
+        Vai ser muito bom ter você lá 😊
+      </p>
+
+      <div class="actions">
+        <button class="btn ghost" id="okFinal" type="button">
+          Fechar
+        </button>
+      </div>
+
     </div>
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
